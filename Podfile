@@ -18,3 +18,9 @@ target 'CallableTests' do
   shared_pods
 end
 
+target 'Demo' do
+  use_frameworks!
+
+  shared_pods
+end
+
