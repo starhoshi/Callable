@@ -11,7 +11,7 @@ pod 'Callable'
 
 ## Define endpoint
 
-You need to define response extend Decodable.
+You need to define `Response` extend `Decodable`.
 
 * path
     * name The name of the Callable HTTPS trigger.
