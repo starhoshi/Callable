@@ -9,7 +9,7 @@ pod 'Callable'
 
 # Usage
 
-## Define endpoint
+## Define endpoint and Response
 
 You need to define `Response` extend `Decodable`.
 
