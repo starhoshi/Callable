@@ -10,6 +10,9 @@
 		32F3555E2065143500E49EF2 /* Callable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F355542065143500E49EF2 /* Callable.framework */; };
 		32F355632065143500E49EF2 /* CallableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F355622065143500E49EF2 /* CallableTests.swift */; };
 		32F355652065143500E49EF2 /* Callable.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F355572065143500E49EF2 /* Callable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32F3556F2065144600E49EF2 /* Callable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3556E2065144600E49EF2 /* Callable.swift */; };
+		A3357418B5DCD54416CC9DAD /* Pods_Callable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D0117E721BF170C45FF0866 /* Pods_Callable.framework */; };
+		F1E0A7B7D1D4936C1292526E /* Pods_CallableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33AA8444CEF55369BAC78C88 /* Pods_CallableTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,13 @@
 		32F3555D2065143500E49EF2 /* CallableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32F355622065143500E49EF2 /* CallableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallableTests.swift; sourceTree = "<group>"; };
 		32F355642065143500E49EF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32F3556E2065144600E49EF2 /* Callable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callable.swift; sourceTree = "<group>"; };
+		33AA8444CEF55369BAC78C88 /* Pods_CallableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CallableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F8EC0DA65C350650315359 /* Pods-Callable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callable.release.xcconfig"; path = "Pods/Target Support Files/Pods-Callable/Pods-Callable.release.xcconfig"; sourceTree = "<group>"; };
+		61B1109EBA47744A611B26F8 /* Pods-CallableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallableTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CallableTests/Pods-CallableTests.release.xcconfig"; sourceTree = "<group>"; };
+		7D0117E721BF170C45FF0866 /* Pods_Callable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Callable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF86B837E5B03A2A77B261F /* Pods-Callable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Callable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Callable/Pods-Callable.debug.xcconfig"; sourceTree = "<group>"; };
+		DCA64A3D11BD3256D11E8BEC /* Pods-CallableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CallableTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CallableTests/Pods-CallableTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3357418B5DCD54416CC9DAD /* Pods_Callable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F3555E2065143500E49EF2 /* Callable.framework in Frameworks */,
+				F1E0A7B7D1D4936C1292526E /* Pods_CallableTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,8 @@
 				32F355562065143500E49EF2 /* Callable */,
 				32F355612065143500E49EF2 /* CallableTests */,
 				32F355552065143500E49EF2 /* Products */,
+				8B35913C430CCDF23A9EF280 /* Pods */,
+				4509CA12D2FD00C1A4CDBBC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +87,7 @@
 			children = (
 				32F355572065143500E49EF2 /* Callable.h */,
 				32F355582065143500E49EF2 /* Info.plist */,
+				32F3556E2065144600E49EF2 /* Callable.swift */,
 			);
 			path = Callable;
 			sourceTree = "<group>";
@@ -84,6 +99,26 @@
 				32F355642065143500E49EF2 /* Info.plist */,
 			);
 			path = CallableTests;
+			sourceTree = "<group>";
+		};
+		4509CA12D2FD00C1A4CDBBC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D0117E721BF170C45FF0866 /* Pods_Callable.framework */,
+				33AA8444CEF55369BAC78C88 /* Pods_CallableTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B35913C430CCDF23A9EF280 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFF86B837E5B03A2A77B261F /* Pods-Callable.debug.xcconfig */,
+				55F8EC0DA65C350650315359 /* Pods-Callable.release.xcconfig */,
+				DCA64A3D11BD3256D11E8BEC /* Pods-CallableTests.debug.xcconfig */,
+				61B1109EBA47744A611B26F8 /* Pods-CallableTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,10 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32F355682065143500E49EF2 /* Build configuration list for PBXNativeTarget "Callable" */;
 			buildPhases = (
+				D5575AAA69A75EBF13C2FF5B /* [CP] Check Pods Manifest.lock */,
 				32F3554F2065143500E49EF2 /* Sources */,
 				32F355502065143500E49EF2 /* Frameworks */,
 				32F355512065143500E49EF2 /* Headers */,
 				32F355522065143500E49EF2 /* Resources */,
+				A07BC58A5BDD1BAADA2F85B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32F3556B2065143500E49EF2 /* Build configuration list for PBXNativeTarget "CallableTests" */;
 			buildPhases = (
+				9964510C9A26196594BC4F2D /* [CP] Check Pods Manifest.lock */,
 				32F355592065143500E49EF2 /* Sources */,
 				32F3555A2065143500E49EF2 /* Frameworks */,
 				32F3555B2065143500E49EF2 /* Resources */,
+				860EC308F941487D9FC70E8C /* [CP] Embed Pods Frameworks */,
+				A2260CB8825B3493D8B37F65 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +188,7 @@
 				TargetAttributes = {
 					32F355532065143500E49EF2 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					32F3555C2065143500E49EF2 = {
@@ -191,11 +232,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		860EC308F941487D9FC70E8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CallableTests/Pods-CallableTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallableTests/Pods-CallableTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9964510C9A26196594BC4F2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CallableTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A07BC58A5BDD1BAADA2F85B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Callable/Pods-Callable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2260CB8825B3493D8B37F65 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CallableTests/Pods-CallableTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5575AAA69A75EBF13C2FF5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Callable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32F3554F2065143500E49EF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F3556F2065144600E49EF2 /* Callable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +468,9 @@
 		};
 		32F355692065143500E49EF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF86B837E5B03A2A77B261F /* Pods-Callable.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.starhoshi.Callable;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,7 +492,9 @@
 		};
 		32F3556A2065143500E49EF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F8EC0DA65C350650315359 /* Pods-Callable.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -375,7 +515,9 @@
 		};
 		32F3556C2065143500E49EF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCA64A3D11BD3256D11E8BEC /* Pods-CallableTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NG7BR536A;
 				INFOPLIST_FILE = CallableTests/Info.plist;
@@ -389,7 +531,9 @@
 		};
 		32F3556D2065143500E49EF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61B1109EBA47744A611B26F8 /* Pods-CallableTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NG7BR536A;
 				INFOPLIST_FILE = CallableTests/Info.plist;
