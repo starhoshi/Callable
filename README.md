@@ -1,4 +1,10 @@
 # Callable
+
+![](https://cocoapod-badges.herokuapp.com/v/Callable/badge.png)
+![](https://cocoapod-badges.herokuapp.com/p/Callable/badge.png)
+[![Build Status](https://travis-ci.org/starhoshi/Callable.svg?branch=master)](https://travis-ci.org/starhoshi/Callable)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 Type-safe [Firebase HTTPS Callable Functions](https://firebase.google.com/docs/functions/callable) client using Decodable.
 
 # Installation
