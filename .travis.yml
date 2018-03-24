@@ -1,6 +1,6 @@
 osx_image: xcode9.2
 language: swift
 script:
-    - bundle exec pod install
+    - bundle exec pod install --repo-update
     - bundle exec fastlane scan
 
