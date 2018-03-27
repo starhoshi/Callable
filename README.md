@@ -20,9 +20,9 @@ pod 'Callable'
 You need to define `Response` extend `Decodable`.
 
 * path
-    * name The name of the Callable HTTPS trigger.
+    * The name of the Callable HTTPS trigger.
 * parameter
-    * data Parameters to pass to the trigger.
+    * Parameters to pass to the trigger.
 
 ```swift
 struct SampleResponse: Decodable {
@@ -51,14 +51,6 @@ struct Sample: Callable {
 
 If the request succeeds, `Response` type will be returned.
 
-* CallableError
-    * function(Error)
-        * server threw an error or if the resulting promise was rejected.
-    * decode(Error) 
-        * decode failed
-    * illegalCombination(Any?, Error?)
-        * both result and error exist, or nil
-
 ```swift
 let sample = Sample(name: "Jobs")
 sample.call { result in
@@ -70,3 +62,12 @@ sample.call { result in
     }
 }
 ```
+
+
+* CallableError
+    * function(Error)
+        * server threw an error or if the resulting promise was rejected.
+    * decode(Error) 
+        * decode failed
+    * illegalCombination(Any?, Error?)
+        * both result and error exist, or nil
