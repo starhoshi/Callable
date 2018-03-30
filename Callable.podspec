@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name               = "Callable"
-  s.version            = "0.1.0"
+  s.version            = "0.1.1"
   s.summary            = "Type-safe Firebase HTTPS Callable Functions client using Decodable"
   s.homepage           = "https://github.com/starhoshi/Callable"
   s.license            = { :type => 'MIT', :file => 'LICENSE' }
