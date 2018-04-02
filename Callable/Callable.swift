@@ -23,9 +23,9 @@ public protocol Callable {
     /// Callable response that have to extend Decodable
     associatedtype Response: Decodable
 
-    /// Name The name of the Callable HTTPS trigger.
+    /// The name of the Callable HTTPS trigger.
     var path: String { get }
-    /// Data Parameters to pass to the trigger. Default is nil.
+    /// Parameters to pass to the trigger. Default is nil.
     var parameter: [String: Any]? { get }
 
     /// Decoder for HTTPSCallableResult. Default is `JSONDecoder()`.
@@ -47,15 +47,13 @@ public extension Callable {
     }
 
     public func call(completion: @escaping (Result<Response, CallableError>) -> Void) {
-        let _jsonDecoder = jsonDecoder
-
         Functions.functions().httpsCallable(path)
             .call(parameter) { result, error in
                 switch (result, error) {
                 case (let result?, nil):
                     do {
                         let data = try JSONSerialization.data(withJSONObject: result.data, options: [])
-                        completion(.success(try _jsonDecoder.decode(Response.self, from: data)))
+                        completion(.success(try self.jsonDecoder.decode(Response.self, from: data)))
                     } catch let error {
                         completion(.failure(.decode(error)))
                     }
