@@ -16,7 +16,7 @@ public enum CallableError: Error {
     /// decode failed
     case decode(Error)
     /// both result and error exist, or nil
-    case illegalCombination(Any?, Error?)
+    case illegalCombination(HTTPSCallableResult?, Error?)
 }
 
 public protocol Callable {
@@ -53,8 +53,7 @@ public extension Callable {
                 case (let result?, nil):
                     do {
                         let data = try JSONSerialization.data(withJSONObject: result.data, options: [])
-                        let response = try _jsonDecoder.decode(Response.self, from: data)
-                        completion(.success(response))
+                        completion(.success(try _jsonDecoder.decode(Response.self, from: data)))
                     } catch let error {
                         completion(.failure(.decode(error)))
                     }
