@@ -35,6 +35,10 @@ public protocol Callable {
 }
 
 public extension Callable {
+    public var parameter: [String: Any]? {
+        return nil
+    }
+
     public func call(completion: @escaping (Result<Response, CallableError>) -> Void) {
         Functions.functions().httpsCallable(path)
             .call(parameter) { result, error in
@@ -44,7 +48,7 @@ public extension Callable {
                         let data = try JSONSerialization.data(withJSONObject: result.data, options: [])
                         let response = try JSONDecoder().decode(Response.self, from: data)
                         completion(.success(response))
-                    } catch let error as NSError {
+                    } catch let error {
                         completion(.failure(.decode(error)))
                     }
                 case (nil, let error?):
