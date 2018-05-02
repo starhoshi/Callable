@@ -16,7 +16,7 @@ public enum CallableError: Error {
     /// Decode failed
     case decode(Error)
     /// Both result and error exist, or nil
-    case illegalCombination(HTTPSCallableResult?, Error?)
+    case illegalCombination(Data?, Error?)
 }
 
 public protocol Callable {
@@ -34,7 +34,7 @@ public protocol Callable {
     /// Call Callable HTTPS trigger asynchronously.
     ///
     /// - Parameter completion: The block to call when the HTTPS request has completed.
-    func call(completion: @escaping (Result<Response, CallableError>) -> Void)
+    func call(_ session: Session, completion: @escaping (Result<Response, CallableError>) -> Void)
 }
 
 public extension Callable {
@@ -46,22 +46,21 @@ public extension Callable {
         return JSONDecoder()
     }
 
-    public func call(completion: @escaping (Result<Response, CallableError>) -> Void) {
-        Functions.functions().httpsCallable(path)
-            .call(parameter) { result, error in
-                switch (result, error) {
-                case (let result?, nil):
-                    do {
-                        let data = try JSONSerialization.data(withJSONObject: result.data, options: [])
-                        completion(.success(try self.jsonDecoder.decode(Response.self, from: data)))
-                    } catch let error {
-                        completion(.failure(.decode(error)))
-                    }
-                case (nil, let error?):
-                    completion(.failure(.function(error)))
-                default:
-                    completion(.failure(.illegalCombination(result, error)))
+    public func call(_ session: Session = CallableSession.shared, completion: @escaping (Result<Response, CallableError>) -> Void) {
+        session.send(path, parameter: parameter) { data, error in
+            switch (data, error) {
+            case (let data?, nil):
+                do {
+                    completion(.success(try self.jsonDecoder.decode(Response.self, from: data)))
+                } catch let error {
+                    completion(.failure(.decode(error)))
                 }
+            case (nil, let error?):
+                completion(.failure(.function(error)))
+            default:
+                completion(.failure(.illegalCombination(data, error)))
+            }
+
         }
     }
 }

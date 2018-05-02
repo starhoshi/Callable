@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169C17A5209945BC008A94D2 /* CallableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C17A4209945BC008A94D2 /* CallableSession.swift */; };
+		169C17A6209947F5008A94D2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C17A2209945B0008A94D2 /* Session.swift */; };
+		169C17A720994B9F008A94D2 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C17A2209945B0008A94D2 /* Session.swift */; };
+		169C17A820994BAA008A94D2 /* CallableSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169C17A4209945BC008A94D2 /* CallableSession.swift */; };
 		320D9A5720651B6B00BF5396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D9A5620651B6B00BF5396 /* AppDelegate.swift */; };
 		320D9A5920651B6B00BF5396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D9A5820651B6B00BF5396 /* ViewController.swift */; };
 		320D9A5C20651B6B00BF5396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 320D9A5A20651B6B00BF5396 /* Main.storyboard */; };
@@ -33,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		169C17A2209945B0008A94D2 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		169C17A4209945BC008A94D2 /* CallableSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallableSession.swift; sourceTree = "<group>"; };
 		1D0803CA92EFDB6C97F9ED65 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		320D9A5420651B6B00BF5396 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		320D9A5620651B6B00BF5396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +134,8 @@
 				32F355572065143500E49EF2 /* Callable.h */,
 				32F355582065143500E49EF2 /* Info.plist */,
 				32F3556E2065144600E49EF2 /* Callable.swift */,
+				169C17A2209945B0008A94D2 /* Session.swift */,
+				169C17A4209945BC008A94D2 /* CallableSession.swift */,
 			);
 			path = Callable;
 			sourceTree = "<group>";
@@ -466,8 +474,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169C17A720994B9F008A94D2 /* Session.swift in Sources */,
 				320D9A5920651B6B00BF5396 /* ViewController.swift in Sources */,
 				320D9A5720651B6B00BF5396 /* AppDelegate.swift in Sources */,
+				169C17A820994BAA008A94D2 /* CallableSession.swift in Sources */,
 				320D9A6620651B8000BF5396 /* Callable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +486,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169C17A5209945BC008A94D2 /* CallableSession.swift in Sources */,
 				32F3556F2065144600E49EF2 /* Callable.swift in Sources */,
+				169C17A6209947F5008A94D2 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
