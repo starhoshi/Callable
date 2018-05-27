@@ -1,7 +1,7 @@
 platform :ios, '10.0'
 
 def shared_pods
-  pod 'FirebaseFunctions'
+  pod 'Firebase/Functions'
   pod 'Result'
 end
 
