@@ -17,6 +17,8 @@ public enum CallableError: Error {
     case decode(Error)
     /// Both result and error exist, or nil
     case illegalCombination(Data?, Error?)
+
+    case resultDataIsNull
 }
 
 public protocol Callable {
