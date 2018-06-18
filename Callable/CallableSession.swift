@@ -19,6 +19,10 @@ public class CallableSession: Session {
         Functions.functions().httpsCallable(path)
             .call(parameter) { result, error in
                 if let result = result {
+                    if result.data is NSNull {
+                        handler(nil, CallableError.resultDataIsNull)
+                        return
+                    }
                     do {
                         let data = try JSONSerialization.data(withJSONObject: result.data, options: [])
                         handler(data, error)
