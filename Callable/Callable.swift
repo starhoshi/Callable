@@ -17,7 +17,7 @@ public enum CallableError: Error {
     case decode(Error)
     /// Both result and error exist, or nil
     case illegalCombination(Data?, Error?)
-
+    /// `FIRHTTPSCallableResult.data` is null.
     case resultDataIsNull
 }
 
