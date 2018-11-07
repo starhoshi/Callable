@@ -15,8 +15,9 @@ public class CallableSession: Session {
     private init() {
     }
 
-    public func send(_ path: String, parameter: [String : Any]?, handler: @escaping (Data?, Error?) -> Void) {
-        Functions.functions().httpsCallable(path)
+    public func send(_ path: String, region: String? = nil, parameter: [String : Any]?, handler: @escaping (Data?, Error?) -> Void) {
+        let function = region.map { Functions.functions(region: $0) } ?? Functions.functions()
+        function.httpsCallable(path)
             .call(parameter) { result, error in
                 if let result = result {
                     if result.data is NSNull {

@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol Session {
-    func send(_ path: String, parameter: [String: Any]?, handler: @escaping (Data?, Error?) -> Void)
+    func send(_ path: String, region: String?, parameter: [String : Any]?, handler: @escaping (Data?, Error?) -> Void)
 }

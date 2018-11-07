@@ -33,6 +33,9 @@ public protocol Callable {
     /// Decoder for HTTPSCallableResult. Default is `JSONDecoder()`.
     var jsonDecoder: JSONDecoder { get }
 
+    /// The region for the http trigger
+    var region: String? { get }
+
     /// Call Callable HTTPS trigger asynchronously.
     ///
     /// - Parameter completion: The block to call when the HTTPS request has completed.
@@ -48,8 +51,12 @@ public extension Callable {
         return JSONDecoder()
     }
 
+    public var region: String? {
+        return nil
+    }
+
     public func call(_ session: Session = CallableSession.shared, completion: @escaping (Result<Response, CallableError>) -> Void) {
-        session.send(path, parameter: parameter) { data, error in
+        session.send(path, region: region, parameter: parameter) { data, error in
             switch (data, error) {
             case (let data?, nil):
                 do {
