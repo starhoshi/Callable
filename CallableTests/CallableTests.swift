@@ -25,7 +25,7 @@ class CallableTests: XCTestCase {
             self.error = error
         }
 
-        func send(_ path: String, region: String? = nil, parameter: [String : Any]?, handler: @escaping (Data?, Error?) -> Void) {
+        func send(_ path: String, region: String? = nil, parameter: [String: Any]?, handler: @escaping (Data?, Error?) -> Void) {
             handler(data, error)
         }
     }
@@ -41,9 +41,12 @@ class CallableTests: XCTestCase {
         let json = try! JSONSerialization.data(withJSONObject: ["name": "Mike"], options: [])
         let expectation = XCTestExpectation()
         TestRequest().call(MockSession(data: json)) { result in
-            XCTAssertNotNil(result.value)
-            XCTAssertNil(result.error)
-            XCTAssertEqual(result.value?.name, "Mike")
+            switch result {
+            case .success(let response):
+                XCTAssertEqual(response.name, "Mike")
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 1.0)
@@ -53,14 +56,17 @@ class CallableTests: XCTestCase {
         let error = makeCallableError(details: ["code": "foobar"])
         let expectation = XCTestExpectation()
         TestRequest().call(MockSession(error: error)) { result in
-            XCTAssertNotNil(result.error)
-            XCTAssertNil(result.value)
-            if let error = result.error, case let CallableError.function(functionError as NSError) = error {
-                XCTAssertNotNil(functionError.userInfo)
-                XCTAssertNotNil(functionError.userInfo["details"] as? [String: Any])
-                XCTAssertEqual((functionError.userInfo["details"] as? [String: Any])?["code"] as? String, "foobar")
-            } else {
+            switch result {
+            case .success:
                 XCTFail()
+            case .failure(let error):
+                switch error {
+                case .function(let functionError as NSError):
+                    XCTAssertNotNil(functionError.userInfo["details"] as? [String: Any])
+                    XCTAssertEqual((functionError.userInfo["details"] as? [String: Any])?["code"] as? String, "foobar")
+                default:
+                    XCTFail()
+                }
             }
             expectation.fulfill()
         }
