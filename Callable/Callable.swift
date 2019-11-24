@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Result
 import FirebaseFunctions
 
 public enum CallableError: Error {
@@ -43,19 +42,19 @@ public protocol Callable {
 }
 
 public extension Callable {
-    public var parameter: [String: Any]? {
+    var parameter: [String: Any]? {
         return nil
     }
 
-    public var jsonDecoder: JSONDecoder {
+    var jsonDecoder: JSONDecoder {
         return JSONDecoder()
     }
 
-    public var region: String? {
+    var region: String? {
         return nil
     }
 
-    public func call(_ session: Session = CallableSession.shared, completion: @escaping (Result<Response, CallableError>) -> Void) {
+    func call(_ session: Session = CallableSession.shared, completion: @escaping (Result<Response, CallableError>) -> Void) {
         session.send(path, region: region, parameter: parameter) { data, error in
             switch (data, error) {
             case (let data?, nil):
